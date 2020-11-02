@@ -282,6 +282,11 @@
                                 <action selector="cancelButtonPressed:" destination="ony-JX-ATJ" id="fIM-vT-hUU"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ZuG-Nd-5YO">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="ony-JX-ATJ" id="ztq-y0-ez3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
