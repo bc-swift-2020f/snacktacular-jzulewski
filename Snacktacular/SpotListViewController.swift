@@ -10,6 +10,7 @@ import UIKit
 class SpotListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var sortSegmentedControl: UISegmentedControl!
     var spots = ["Island Creek Oysters", "El Pelon", "Shake Shack", "Pino's Pizza"]
 
     override func viewDidLoad() {
@@ -17,18 +18,20 @@ class SpotListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
+        configureSegmentedControl()
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func configureSegmentedControl() {
+        let orangeFontColor = [NSAttributedString.Key.foregroundColor : UIColor(named: "PrimaryColor") ?? UIColor.orange]
+        let whiteFontColor = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        sortSegmentedControl.setTitleTextAttributes(orangeFontColor, for: .selected)
+        sortSegmentedControl.setTitleTextAttributes(whiteFontColor, for: .normal)
+        sortSegmentedControl.layer.borderColor = UIColor.white.cgColor
+        sortSegmentedControl.layer.borderColor = UIColor.white.cgColor
+        sortSegmentedControl.layer.borderWidth = 1.0
+        
     }
-    */
 
 }
 extension SpotListViewController: UITableViewDelegate, UITableViewDataSource {
