@@ -4,8 +4,9 @@
 //
 //  Created by John Zulewski on 11/2/20.
 import UIKit
+import GooglePlaces
 
-class SpotDetailViewController: UIViewController {
+class SpotDetailViewController: UIViewController, GMSAutocompleteViewControllerDelegate {
 
     @IBOutlet weak var nameField: UITextField!
     
@@ -56,5 +57,46 @@ class SpotDetailViewController: UIViewController {
         leaveViewController()
     }
     
+    @IBAction func locationButtonPressed(_ sender: UIBarButtonItem) {
+        let autocompleteController = GMSAutocompleteViewController()
+        autocompleteController.delegate = self
+        // Display the autocomplete view controller.
+        present(autocompleteController, animated: true, completion: nil)
+    }
+    
+}
+
+extension SpotDetailViewController {
+
+  // Handle the user's selection.
+  func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+    print("Place name: \(String(describing: place.name))")
+    print("Place ID: \(String(describing: place.placeID))")
+    print("Place attributions: \(String(describing: place.attributions))")
+    spot.name = place.name ?? "Unknown Place"
+    spot.address = place.formattedAddress ?? "Unknown Address"
+    print("Coordinates = \(place.coordinate)")
+    updateUserInterface()
+    dismiss(animated: true, completion: nil)
+  }
+
+  func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+    // TODO: handle the error.
+    print("Error: ", error.localizedDescription)
+  }
+
+  // User canceled the operation.
+  func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+    dismiss(animated: true, completion: nil)
+  }
+
+  // Turn the network activity indicator on and off again.
+  func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+    UIApplication.shared.isNetworkActivityIndicatorVisible = true
+  }
+
+  func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+  }
 
 }
