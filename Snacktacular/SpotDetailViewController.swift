@@ -5,6 +5,7 @@
 //  Created by John Zulewski on 11/2/20.
 import UIKit
 import GooglePlaces
+import MapKit
 
 class SpotDetailViewController: UIViewController, GMSAutocompleteViewControllerDelegate {
 
@@ -12,8 +13,12 @@ class SpotDetailViewController: UIViewController, GMSAutocompleteViewControllerD
     
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var mapView: MKMapView!
     
     var spot: Spot!
+    let regionDistance: CLLocationDegrees = 750.0
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +26,26 @@ class SpotDetailViewController: UIViewController, GMSAutocompleteViewControllerD
         if spot == nil {
             spot = Spot()
         }
+        setupMapView()
+        updateUserInterface()
+        
+    }
+    
+    func setupMapView() {
+        let region = MKCoordinateRegion(center: spot.coordinate, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        mapView.setRegion(region, animated: true)
+    }
+    
+    func updateMap() {
+        mapView.removeAnnotations(mapView.annotations)
+        mapView.addAnnotation(spot)
+        mapView.setCenter(spot.coordinate, animated: true)
     }
     
     func updateUserInterface() {
         nameField.text = spot.name
         addressTextField.text = spot.address
+        updateMap()
     }
     
     func updateFromInterface() {
@@ -70,12 +90,9 @@ extension SpotDetailViewController {
 
   // Handle the user's selection.
   func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-    print("Place name: \(String(describing: place.name))")
-    print("Place ID: \(String(describing: place.placeID))")
-    print("Place attributions: \(String(describing: place.attributions))")
     spot.name = place.name ?? "Unknown Place"
     spot.address = place.formattedAddress ?? "Unknown Address"
-    print("Coordinates = \(place.coordinate)")
+    spot.coordinate = place.coordinate
     updateUserInterface()
     dismiss(animated: true, completion: nil)
   }

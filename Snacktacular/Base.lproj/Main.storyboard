@@ -250,6 +250,10 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <mapView key="backgroundView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" id="tCt-OJ-lQ4">
+                                    <rect key="frame" x="0.0" y="0.0" width="409" height="100"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </mapView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="irJ-fh-KVz">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -295,6 +299,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addressTextField" destination="zLs-g5-kdR" id="aN0-XN-24o"/>
+                        <outlet property="mapView" destination="tCt-OJ-lQ4" id="lXJ-QB-Fls"/>
                         <outlet property="nameField" destination="kh6-wC-pTj" id="KWv-gV-HyI"/>
                         <outlet property="ratingLabel" destination="V9y-xe-1Dx" id="YIr-fX-XBh"/>
                     </connections>
