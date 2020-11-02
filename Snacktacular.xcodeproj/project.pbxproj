@@ -13,6 +13,7 @@
 		710B7354255045B800A7523E /* SpotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B7353255045B800A7523E /* SpotDetailViewController.swift */; };
 		717D66942550848E00738BAD /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717D66932550848E00738BAD /* Spot.swift */; };
 		717D66972550900700738BAD /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717D66962550900700738BAD /* UIViewController+alert.swift */; };
+		717D669A2550919000738BAD /* Spots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717D66992550919000738BAD /* Spots.swift */; };
 		71B8980925502CEF00A08FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B8980825502CEF00A08FEC /* AppDelegate.swift */; };
 		71B8980B25502CEF00A08FEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B8980A25502CEF00A08FEC /* SceneDelegate.swift */; };
 		71B8980D25502CEF00A08FEC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B8980C25502CEF00A08FEC /* LoginViewController.swift */; };
@@ -28,6 +29,7 @@
 		710B7353255045B800A7523E /* SpotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailViewController.swift; sourceTree = "<group>"; };
 		717D66932550848E00738BAD /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		717D66962550900700738BAD /* UIViewController+alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+alert.swift"; sourceTree = "<group>"; };
+		717D66992550919000738BAD /* Spots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spots.swift; sourceTree = "<group>"; };
 		71B8980525502CEF00A08FEC /* Snacktacular.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snacktacular.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71B8980825502CEF00A08FEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71B8980A25502CEF00A08FEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				71B8980825502CEF00A08FEC /* AppDelegate.swift */,
 				71B8980A25502CEF00A08FEC /* SceneDelegate.swift */,
 				717D66932550848E00738BAD /* Spot.swift */,
+				717D66992550919000738BAD /* Spots.swift */,
 				71B8980C25502CEF00A08FEC /* LoginViewController.swift */,
 				710B734D25503CD400A7523E /* SpotListViewController.swift */,
 				710B735025503E7600A7523E /* SpotTableViewCell.swift */,
@@ -246,6 +249,7 @@
 				71B8980D25502CEF00A08FEC /* LoginViewController.swift in Sources */,
 				71B8980925502CEF00A08FEC /* AppDelegate.swift in Sources */,
 				710B7354255045B800A7523E /* SpotDetailViewController.swift in Sources */,
+				717D669A2550919000738BAD /* Spots.swift in Sources */,
 				710B735125503E7600A7523E /* SpotTableViewCell.swift in Sources */,
 				717D66942550848E00738BAD /* Spot.swift in Sources */,
 				71B8980B25502CEF00A08FEC /* SceneDelegate.swift in Sources */,
