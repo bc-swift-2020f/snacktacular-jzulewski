@@ -11,6 +11,7 @@
 		710B734E25503CD400A7523E /* SpotListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B734D25503CD400A7523E /* SpotListViewController.swift */; };
 		710B735125503E7600A7523E /* SpotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B735025503E7600A7523E /* SpotTableViewCell.swift */; };
 		710B7354255045B800A7523E /* SpotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B7353255045B800A7523E /* SpotDetailViewController.swift */; };
+		7129B94D25598E5B007A1296 /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7129B94C25598E5B007A1296 /* ReviewTableViewController.swift */; };
 		717D66942550848E00738BAD /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717D66932550848E00738BAD /* Spot.swift */; };
 		717D66972550900700738BAD /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717D66962550900700738BAD /* UIViewController+alert.swift */; };
 		717D669A2550919000738BAD /* Spots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717D66992550919000738BAD /* Spots.swift */; };
@@ -28,6 +29,7 @@
 		710B734D25503CD400A7523E /* SpotListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotListViewController.swift; sourceTree = "<group>"; };
 		710B735025503E7600A7523E /* SpotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotTableViewCell.swift; sourceTree = "<group>"; };
 		710B7353255045B800A7523E /* SpotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailViewController.swift; sourceTree = "<group>"; };
+		7129B94C25598E5B007A1296 /* ReviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
 		717D66932550848E00738BAD /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		717D66962550900700738BAD /* UIViewController+alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+alert.swift"; sourceTree = "<group>"; };
 		717D66992550919000738BAD /* Spots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spots.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				710B734D25503CD400A7523E /* SpotListViewController.swift */,
 				710B735025503E7600A7523E /* SpotTableViewCell.swift */,
 				710B7353255045B800A7523E /* SpotDetailViewController.swift */,
+				7129B94C25598E5B007A1296 /* ReviewTableViewController.swift */,
 				71B8980E25502CEF00A08FEC /* Main.storyboard */,
 				71B8981125502CF100A08FEC /* Assets.xcassets */,
 				71B8981325502CF100A08FEC /* LaunchScreen.storyboard */,
@@ -252,6 +255,7 @@
 				71B8980D25502CEF00A08FEC /* LoginViewController.swift in Sources */,
 				71B8980925502CEF00A08FEC /* AppDelegate.swift in Sources */,
 				710B7354255045B800A7523E /* SpotDetailViewController.swift in Sources */,
+				7129B94D25598E5B007A1296 /* ReviewTableViewController.swift in Sources */,
 				717D669A2550919000738BAD /* Spots.swift in Sources */,
 				710B735125503E7600A7523E /* SpotTableViewCell.swift in Sources */,
 				717D669D2550998900738BAD /* APIKeys.swift in Sources */,
