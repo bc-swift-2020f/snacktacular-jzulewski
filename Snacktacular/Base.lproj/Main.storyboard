@@ -276,7 +276,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReviewCell" id="49k-hg-YYb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReviewCell" id="49k-hg-YYb" customClass="SpotReviewTableViewCell" customModule="Snacktacular" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="408" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="49k-hg-YYb" id="z0Z-ty-RG5">
@@ -364,6 +364,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="reviewTextLabel" destination="Gf5-4N-6A5" id="oDx-PO-ncQ"/>
+                                            <outlet property="reviewTitleLabel" destination="bLo-Tb-chh" id="q2X-Q7-H1A"/>
                                             <segue destination="hMC-ib-0Hw" kind="show" identifier="ShowReview" id="hnU-JH-2LG"/>
                                         </connections>
                                     </tableViewCell>
