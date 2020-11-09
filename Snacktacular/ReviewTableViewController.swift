@@ -19,15 +19,28 @@ class ReviewTableViewController: UITableViewController {
     @IBOutlet weak var reviewDateLabel: UILabel!
     @IBOutlet weak var reviewTextView: UITextView!
     @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet var starButtonCollection: [UIButton]!
     
     var review: Review!
     var spot: Spot!
+    var rating = 0 {
+        didSet {
+            for starButton in starButtonCollection {
+                let imageName = (starButton.tag < rating ? "star.fill" : "star")
+                starButton.setImage(UIImage(systemName: imageName), for: .normal)
+                starButton.tintColor = (starButton.tag < rating ? .systemRed : .darkText)
+            }
+            print("new rating \(rating)")
+            review.rating = rating
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         guard spot != nil else {
             print("Error: No spot passed to ReviewTableViewController.swift")
+            return
         }
         
         if review == nil {
@@ -41,7 +54,7 @@ class ReviewTableViewController: UITableViewController {
         addressLabel.text = spot.address
         reviewTitleField.text = review.title
         reviewTextView.text = review.text
-        // TODO: Update for rating
+        rating = review.rating
         
     }
     
@@ -81,4 +94,9 @@ class ReviewTableViewController: UITableViewController {
             }
         }
     }
+    
+    @IBAction func starButtonPressed(_ sender: UIButton) {
+        rating = sender.tag + 1
+    }
+    
 }
