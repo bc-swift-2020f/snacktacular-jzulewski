@@ -19,6 +19,8 @@
 		717D66972550900700738BAD /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717D66962550900700738BAD /* UIViewController+alert.swift */; };
 		717D669A2550919000738BAD /* Spots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717D66992550919000738BAD /* Spots.swift */; };
 		717D669D2550998900738BAD /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717D669C2550998900738BAD /* APIKeys.swift */; };
+		718214F72562CA1F009FA70C /* UIView+addBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718214F62562CA1F009FA70C /* UIView+addBorder.swift */; };
+		718214FA2562CAAB009FA70C /* UIBarButton+hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718214F92562CAAB009FA70C /* UIBarButton+hide.swift */; };
 		71B8980925502CEF00A08FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B8980825502CEF00A08FEC /* AppDelegate.swift */; };
 		71B8980B25502CEF00A08FEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B8980A25502CEF00A08FEC /* SceneDelegate.swift */; };
 		71B8980D25502CEF00A08FEC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B8980C25502CEF00A08FEC /* LoginViewController.swift */; };
@@ -40,6 +42,8 @@
 		717D66962550900700738BAD /* UIViewController+alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+alert.swift"; sourceTree = "<group>"; };
 		717D66992550919000738BAD /* Spots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spots.swift; sourceTree = "<group>"; };
 		717D669C2550998900738BAD /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		718214F62562CA1F009FA70C /* UIView+addBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addBorder.swift"; sourceTree = "<group>"; };
+		718214F92562CAAB009FA70C /* UIBarButton+hide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButton+hide.swift"; sourceTree = "<group>"; };
 		71B8980525502CEF00A08FEC /* Snacktacular.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snacktacular.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71B8980825502CEF00A08FEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71B8980A25502CEF00A08FEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 				71B8981625502CF100A08FEC /* Info.plist */,
 				71CCDD84255032110053AF29 /* GoogleService-Info.plist */,
 				717D66962550900700738BAD /* UIViewController+alert.swift */,
+				718214F62562CA1F009FA70C /* UIView+addBorder.swift */,
+				718214F92562CAAB009FA70C /* UIBarButton+hide.swift */,
 				717D669C2550998900738BAD /* APIKeys.swift */,
 			);
 			path = Snacktacular;
@@ -265,6 +271,7 @@
 				71B8980D25502CEF00A08FEC /* LoginViewController.swift in Sources */,
 				71B8980925502CEF00A08FEC /* AppDelegate.swift in Sources */,
 				710B7354255045B800A7523E /* SpotDetailViewController.swift in Sources */,
+				718214FA2562CAAB009FA70C /* UIBarButton+hide.swift in Sources */,
 				7129B94D25598E5B007A1296 /* ReviewTableViewController.swift in Sources */,
 				7129B95025599477007A1296 /* Review.swift in Sources */,
 				717D669A2550919000738BAD /* Spots.swift in Sources */,
@@ -274,6 +281,7 @@
 				717D66942550848E00738BAD /* Spot.swift in Sources */,
 				71B8980B25502CEF00A08FEC /* SceneDelegate.swift in Sources */,
 				717D66972550900700738BAD /* UIViewController+alert.swift in Sources */,
+				718214F72562CA1F009FA70C /* UIView+addBorder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
