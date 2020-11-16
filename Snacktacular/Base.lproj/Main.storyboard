@@ -791,8 +791,55 @@
                     <view key="view" contentMode="scaleToFill" id="4bC-Kg-rs0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="JY4-7K-6Hf">
+                                <rect key="frame" x="8" y="96" width="398" height="15"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="By Benedict Cumberbatcj" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ou-58-lxC">
+                                        <rect key="frame" x="0.0" y="0.0" width="215" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="On Dec 22 2100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKq-KD-ja3">
+                                        <rect key="frame" x="275" y="0.0" width="123" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="VC5-aO-NYJ"/>
+                                </constraints>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This describes my meal!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5IW-Sw-DSD">
+                                <rect key="frame" x="8" y="111" width="398" height="36"/>
+                                <color key="backgroundColor" name="UI Element Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="S9x-Qm-c4d"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eVf-ZC-q90">
+                                <rect key="frame" x="8" y="155" width="398" height="650"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="jmL-98-al7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jmL-98-al7" firstAttribute="bottom" secondItem="eVf-ZC-q90" secondAttribute="bottom" constant="8" id="8Tn-4s-drz"/>
+                            <constraint firstItem="5IW-Sw-DSD" firstAttribute="top" secondItem="JY4-7K-6Hf" secondAttribute="bottom" id="AhC-Vi-TBZ"/>
+                            <constraint firstItem="eVf-ZC-q90" firstAttribute="top" secondItem="5IW-Sw-DSD" secondAttribute="bottom" constant="8" id="Gjs-VJ-sN3"/>
+                            <constraint firstItem="5IW-Sw-DSD" firstAttribute="leading" secondItem="jmL-98-al7" secondAttribute="leading" constant="8" id="OTU-HC-HsO"/>
+                            <constraint firstItem="JY4-7K-6Hf" firstAttribute="leading" secondItem="jmL-98-al7" secondAttribute="leading" constant="8" id="Rcd-LU-n8B"/>
+                            <constraint firstItem="eVf-ZC-q90" firstAttribute="leading" secondItem="jmL-98-al7" secondAttribute="leading" constant="8" id="XQx-m5-eEQ"/>
+                            <constraint firstItem="jmL-98-al7" firstAttribute="trailing" secondItem="5IW-Sw-DSD" secondAttribute="trailing" constant="8" id="b92-cb-IUZ"/>
+                            <constraint firstItem="jmL-98-al7" firstAttribute="trailing" secondItem="JY4-7K-6Hf" secondAttribute="trailing" constant="8" id="dSt-Av-OBI"/>
+                            <constraint firstItem="JY4-7K-6Hf" firstAttribute="top" secondItem="jmL-98-al7" secondAttribute="top" constant="8" id="gzV-05-JYq"/>
+                            <constraint firstItem="jmL-98-al7" firstAttribute="trailing" secondItem="eVf-ZC-q90" secondAttribute="trailing" constant="8" id="j7f-Yx-9Cg"/>
+                        </constraints>
                     </view>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="4tW-FG-2ot"/>
@@ -819,7 +866,11 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
                         <outlet property="cancelBarButton" destination="26M-aQ-cps" id="qlE-br-aMc"/>
+                        <outlet property="dateLabel" destination="fKq-KD-ja3" id="kjb-cz-TTa"/>
                         <outlet property="deleteBarButton" destination="ReE-fg-8pJ" id="1iN-Jf-seA"/>
+                        <outlet property="descriptionTextView" destination="5IW-Sw-DSD" id="Be8-Jm-v96"/>
+                        <outlet property="photoImageView" destination="eVf-ZC-q90" id="Yxt-dM-w0l"/>
+                        <outlet property="postedByLabel" destination="7Ou-58-lxC" id="L0R-3p-k15"/>
                         <outlet property="saveBarButton" destination="MDa-qM-OKe" id="YhB-ur-39g"/>
                     </connections>
                 </viewController>
@@ -951,6 +1002,9 @@
         <namedColor name="UI Element Background">
             <color red="0.92100000381469727" green="0.92100000381469727" blue="0.92100000381469727" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
