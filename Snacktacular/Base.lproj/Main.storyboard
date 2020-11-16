@@ -155,6 +155,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" id="tCt-OJ-lQ4">
+                                <rect key="frame" x="2" y="398" width="409" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zcu-z8-g2X">
                                 <rect key="frame" x="0.0" y="242" width="409" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -167,19 +171,31 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <mapView key="backgroundView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" id="tCt-OJ-lQ4">
-                                    <rect key="frame" x="0.0" y="0.0" width="409" height="100"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </mapView>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="irJ-fh-KVz" userLabel="PhotoCell">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="irJ-fh-KVz" userLabel="PhotoCell" customClass="SpotPhotoCollectionViewCell" customModule="Snacktacular" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Hrh-m3-IqC">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="buV-k9-e3c">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="9Tj-k4-Ukn"/>
+                                                        <constraint firstAttribute="height" constant="100" id="PPY-SC-7dR"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="buV-k9-e3c" firstAttribute="top" secondItem="Hrh-m3-IqC" secondAttribute="top" id="JOa-eg-rQ6"/>
+                                                <constraint firstAttribute="bottom" secondItem="buV-k9-e3c" secondAttribute="bottom" id="S5D-Xw-9Lz"/>
+                                                <constraint firstItem="buV-k9-e3c" firstAttribute="leading" secondItem="Hrh-m3-IqC" secondAttribute="leading" id="dEj-N9-MeC"/>
+                                                <constraint firstAttribute="trailing" secondItem="buV-k9-e3c" secondAttribute="trailing" id="iWl-BX-c5e"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
+                                            <outlet property="photoImageView" destination="buV-k9-e3c" id="nkM-E8-rnB"/>
                                             <segue destination="hky-4X-MLD" kind="show" identifier="ShowPhoto" id="Yuc-PK-kYg"/>
                                         </connections>
                                     </collectionViewCell>
@@ -421,6 +437,7 @@
                     <connections>
                         <outlet property="addressTextField" destination="zLs-g5-kdR" id="aN0-XN-24o"/>
                         <outlet property="cancelBarButton" destination="KzH-Js-TOW" id="a4Z-oR-8fW"/>
+                        <outlet property="collectionView" destination="zcu-z8-g2X" id="Wkd-HW-ZGT"/>
                         <outlet property="mapView" destination="tCt-OJ-lQ4" id="lXJ-QB-Fls"/>
                         <outlet property="nameField" destination="kh6-wC-pTj" id="KWv-gV-HyI"/>
                         <outlet property="ratingLabel" destination="V9y-xe-1Dx" id="YIr-fX-XBh"/>

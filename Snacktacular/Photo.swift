@@ -109,6 +109,24 @@ class Photo {
         }
         
     }
+    
+    func loadImage(spot: Spot, completion: @escaping (Bool) -> ()) {
+        guard spot.documentID != "" else {
+            print("Error: Did not pass valid spot into loadImage")
+            return
+        }
+        let storage = Storage.storage()
+        let storageRef = storage.reference().child(spot.documentID).child(documentID)
+        storageRef.getData(maxSize: 25 * 1024 * 1024) { (data, error) in
+            if let error = error {
+                print("Error: an error occured while reading data from file ref \(storageRef) error = \(error.localizedDescription)")
+                return completion(false)
+            } else {
+                self.image = UIImage(data: data!) ?? UIImage()
+                return completion(true)
+            }
+        }
+    }
 }
 
 
