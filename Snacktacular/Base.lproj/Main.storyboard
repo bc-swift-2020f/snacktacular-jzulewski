@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Snacktacular" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -34,7 +34,7 @@
             <objects>
                 <viewController id="SbL-sd-sJz" customClass="SpotListViewController" customModule="Snacktacular" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TDi-AA-pPh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jFK-Di-sdL">
@@ -196,6 +196,9 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="24"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="nameFieldChanged:" destination="ony-JX-ATJ" eventType="editingChanged" id="vI5-hm-gnw"/>
+                                            </connections>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="address" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zLs-g5-kdR">
                                             <rect key="frame" x="8" y="43" width="398" height="17"/>
@@ -396,13 +399,13 @@
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="Wn7-Wc-Ect">
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="Wn7-Wc-Ect">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="KzH-Js-TOW">
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="ony-JX-ATJ" id="fIM-vT-hUU"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ZuG-Nd-5YO">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="ZuG-Nd-5YO">
                             <connections>
                                 <action selector="saveButtonPressed:" destination="ony-JX-ATJ" id="ztq-y0-ez3"/>
                             </connections>
@@ -411,9 +414,11 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addressTextField" destination="zLs-g5-kdR" id="aN0-XN-24o"/>
+                        <outlet property="cancelBarButton" destination="KzH-Js-TOW" id="a4Z-oR-8fW"/>
                         <outlet property="mapView" destination="tCt-OJ-lQ4" id="lXJ-QB-Fls"/>
                         <outlet property="nameField" destination="kh6-wC-pTj" id="KWv-gV-HyI"/>
                         <outlet property="ratingLabel" destination="V9y-xe-1Dx" id="YIr-fX-XBh"/>
+                        <outlet property="saveBarButton" destination="ZuG-Nd-5YO" id="DMG-zp-YtR"/>
                         <outlet property="tableView" destination="67r-YR-lpl" id="ZxI-lT-Ato"/>
                         <segue destination="FgH-qd-zAC" kind="presentation" identifier="AddReview" id="HTY-D4-P8u"/>
                     </connections>
@@ -856,7 +861,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NdA-ww-dvz"/>
+        <segue reference="hnU-JH-2LG"/>
         <segue reference="Jak-aX-Pnp"/>
     </inferredMetricsTieBreakers>
     <resources>

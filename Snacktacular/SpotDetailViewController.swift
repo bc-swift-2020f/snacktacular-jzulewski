@@ -16,6 +16,8 @@ class SpotDetailViewController: UIViewController, GMSAutocompleteViewControllerD
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var saveBarButton: UIBarButtonItem!
+    @IBOutlet weak var cancelBarButton: UIBarButtonItem!
     
     var spot: Spot!
     let regionDistance: CLLocationDegrees = 750.0
@@ -41,6 +43,11 @@ class SpotDetailViewController: UIViewController, GMSAutocompleteViewControllerD
         
         if spot == nil {
             spot = Spot()
+        } else {
+            disableTextEditing()
+            cancelBarButton.hide()
+            saveBarButton.hide()
+            navigationController?.setToolbarHidden(true, animated: true)
         }
         setupMapView()
         reviews = Reviews() // Eventually load data in updateUserInterface
@@ -71,6 +78,16 @@ class SpotDetailViewController: UIViewController, GMSAutocompleteViewControllerD
         nameField.text = spot.name
         addressTextField.text = spot.address
         updateMap()
+    }
+    
+    func disableTextEditing() {
+        nameField.isEnabled = false
+        addressTextField.isEnabled = false
+        nameField.backgroundColor = .clear
+        addressTextField.backgroundColor = .clear
+        nameField.borderStyle = .none
+        addressTextField.borderStyle = .none
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -108,6 +125,10 @@ class SpotDetailViewController: UIViewController, GMSAutocompleteViewControllerD
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let saveAction = UIAlertAction(title: "Save", style: .default) { (_) in
             self.spot.saveData { (success) in
+                self.saveBarButton.title = "Done"
+                self.cancelBarButton.hide()
+                self.navigationController?.setToolbarHidden(true, animated: true)
+                self.disableTextEditing()
                 self.performSegue(withIdentifier: segueIdentifier, sender: nil)
             }
         }
@@ -116,6 +137,20 @@ class SpotDetailViewController: UIViewController, GMSAutocompleteViewControllerD
         alertController.addAction(cancelAction)
         present(alertController, animated: true, completion: nil)
     }
+    
+    
+    @IBAction func nameFieldChanged(_ sender: UITextField) {
+        let noSpaces = nameField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if noSpaces != "" {
+            saveBarButton.isEnabled = true
+        } else {
+            saveBarButton.isEnabled = false
+        }
+        
+    }
+    
+    
+    
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         updateUserInterface()
