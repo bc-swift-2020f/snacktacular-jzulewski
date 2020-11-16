@@ -68,7 +68,9 @@ class Review {
             }
             self.documentID = ref!.documentID
             print("Added document: \(self.documentID) to spot: \(spot.documentID)")
-            completion(true)
+            spot.updateAverageRating {
+                completion(true)
+            }
         } else { // else save to the existing documentID with
             let ref = db.collection("spots").document(spot.documentID).collection("reviews").document(self.documentID)
             ref.setData(dataToSave) { (error) in
@@ -78,7 +80,9 @@ class Review {
                     
                 }
                 print("Updated document: \(self.documentID) in spot: \(spot.documentID)")
-                completion(true)
+                spot.updateAverageRating {
+                    completion(true)
+                }
             }
             
         }
@@ -93,7 +97,9 @@ class Review {
                     completion(false)
                 } else {
                     print("Successfully deleted document \(self.documentID)")
-                    completion(true)
+                    spot.updateAverageRating {
+                        completion(true)
+                    }
                 }
                 
             }
