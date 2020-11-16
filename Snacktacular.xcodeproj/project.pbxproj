@@ -21,6 +21,7 @@
 		717D669D2550998900738BAD /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717D669C2550998900738BAD /* APIKeys.swift */; };
 		718214F72562CA1F009FA70C /* UIView+addBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718214F62562CA1F009FA70C /* UIView+addBorder.swift */; };
 		718214FA2562CAAB009FA70C /* UIBarButton+hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718214F92562CAAB009FA70C /* UIBarButton+hide.swift */; };
+		718214FD2562DC28009FA70C /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718214FC2562DC28009FA70C /* PhotoViewController.swift */; };
 		71B8980925502CEF00A08FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B8980825502CEF00A08FEC /* AppDelegate.swift */; };
 		71B8980B25502CEF00A08FEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B8980A25502CEF00A08FEC /* SceneDelegate.swift */; };
 		71B8980D25502CEF00A08FEC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B8980C25502CEF00A08FEC /* LoginViewController.swift */; };
@@ -44,6 +45,7 @@
 		717D669C2550998900738BAD /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		718214F62562CA1F009FA70C /* UIView+addBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addBorder.swift"; sourceTree = "<group>"; };
 		718214F92562CAAB009FA70C /* UIBarButton+hide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButton+hide.swift"; sourceTree = "<group>"; };
+		718214FC2562DC28009FA70C /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		71B8980525502CEF00A08FEC /* Snacktacular.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snacktacular.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71B8980825502CEF00A08FEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71B8980A25502CEF00A08FEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				710B7353255045B800A7523E /* SpotDetailViewController.swift */,
 				7129B9742559C411007A1296 /* SpotReviewTableViewCell.swift */,
 				7129B94C25598E5B007A1296 /* ReviewTableViewController.swift */,
+				718214FC2562DC28009FA70C /* PhotoViewController.swift */,
 				71B8980E25502CEF00A08FEC /* Main.storyboard */,
 				71B8981125502CF100A08FEC /* Assets.xcassets */,
 				71B8981325502CF100A08FEC /* LaunchScreen.storyboard */,
@@ -276,6 +279,7 @@
 				7129B95025599477007A1296 /* Review.swift in Sources */,
 				717D669A2550919000738BAD /* Spots.swift in Sources */,
 				710B735125503E7600A7523E /* SpotTableViewCell.swift in Sources */,
+				718214FD2562DC28009FA70C /* PhotoViewController.swift in Sources */,
 				7129B9752559C411007A1296 /* SpotReviewTableViewCell.swift in Sources */,
 				717D669D2550998900738BAD /* APIKeys.swift in Sources */,
 				717D66942550848E00738BAD /* Spot.swift in Sources */,
