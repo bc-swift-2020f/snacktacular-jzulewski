@@ -19,6 +19,9 @@
 		712A8C07256307320008357E /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712A8C06256307320008357E /* Photos.swift */; };
 		712A8C29256309CE0008357E /* SpotPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712A8C28256309CE0008357E /* SpotPhotoCollectionViewCell.swift */; };
 		7134F5022575530400B51682 /* SnackUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7134F5012575530400B51682 /* SnackUser.swift */; };
+		7134F50525756D6700B51682 /* SnackUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7134F50425756D6700B51682 /* SnackUserViewController.swift */; };
+		7134F50825756D8F00B51682 /* SnackUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7134F50725756D8F00B51682 /* SnackUserTableViewCell.swift */; };
+		7134F50B25756F4E00B51682 /* SnackUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7134F50A25756F4E00B51682 /* SnackUsers.swift */; };
 		717D66942550848E00738BAD /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717D66932550848E00738BAD /* Spot.swift */; };
 		717D66972550900700738BAD /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717D66962550900700738BAD /* UIViewController+alert.swift */; };
 		717D669A2550919000738BAD /* Spots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717D66992550919000738BAD /* Spots.swift */; };
@@ -47,6 +50,9 @@
 		712A8C06256307320008357E /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		712A8C28256309CE0008357E /* SpotPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		7134F5012575530400B51682 /* SnackUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackUser.swift; sourceTree = "<group>"; };
+		7134F50425756D6700B51682 /* SnackUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackUserViewController.swift; sourceTree = "<group>"; };
+		7134F50725756D8F00B51682 /* SnackUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackUserTableViewCell.swift; sourceTree = "<group>"; };
+		7134F50A25756F4E00B51682 /* SnackUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackUsers.swift; sourceTree = "<group>"; };
 		717D66932550848E00738BAD /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		717D66962550900700738BAD /* UIViewController+alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+alert.swift"; sourceTree = "<group>"; };
 		717D66992550919000738BAD /* Spots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spots.swift; sourceTree = "<group>"; };
@@ -110,6 +116,7 @@
 				712A8BC52562F7880008357E /* Photo.swift */,
 				712A8C06256307320008357E /* Photos.swift */,
 				7134F5012575530400B51682 /* SnackUser.swift */,
+				7134F50A25756F4E00B51682 /* SnackUsers.swift */,
 				71B8980C25502CEF00A08FEC /* LoginViewController.swift */,
 				710B734D25503CD400A7523E /* SpotListViewController.swift */,
 				710B735025503E7600A7523E /* SpotTableViewCell.swift */,
@@ -118,6 +125,8 @@
 				712A8C28256309CE0008357E /* SpotPhotoCollectionViewCell.swift */,
 				7129B94C25598E5B007A1296 /* ReviewTableViewController.swift */,
 				718214FC2562DC28009FA70C /* PhotoViewController.swift */,
+				7134F50425756D6700B51682 /* SnackUserViewController.swift */,
+				7134F50725756D8F00B51682 /* SnackUserTableViewCell.swift */,
 				71B8980E25502CEF00A08FEC /* Main.storyboard */,
 				71B8981125502CF100A08FEC /* Assets.xcassets */,
 				71B8981325502CF100A08FEC /* LaunchScreen.storyboard */,
@@ -295,11 +304,14 @@
 				718214FD2562DC28009FA70C /* PhotoViewController.swift in Sources */,
 				7129B9752559C411007A1296 /* SpotReviewTableViewCell.swift in Sources */,
 				712A8BC62562F7880008357E /* Photo.swift in Sources */,
+				7134F50825756D8F00B51682 /* SnackUserTableViewCell.swift in Sources */,
+				7134F50525756D6700B51682 /* SnackUserViewController.swift in Sources */,
 				717D669D2550998900738BAD /* APIKeys.swift in Sources */,
 				717D66942550848E00738BAD /* Spot.swift in Sources */,
 				71B8980B25502CEF00A08FEC /* SceneDelegate.swift in Sources */,
 				7134F5022575530400B51682 /* SnackUser.swift in Sources */,
 				712A8C29256309CE0008357E /* SpotPhotoCollectionViewCell.swift in Sources */,
+				7134F50B25756F4E00B51682 /* SnackUsers.swift in Sources */,
 				717D66972550900700738BAD /* UIViewController+alert.swift in Sources */,
 				718214F72562CA1F009FA70C /* UIView+addBorder.swift in Sources */,
 			);
